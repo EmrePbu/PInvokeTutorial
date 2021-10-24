@@ -17,6 +17,10 @@ namespace ConsoleApplication1
         [DllImport("NativeLibrary.dll", EntryPoint = "Sum")]
         public static extern int SumFunc(int a, int b);
 
+
+        [DllImport("NativeLibrary.dll")]
+        public static extern int print_prime_factors(int val);
+
         static void Main(string[] args)
         {
 
@@ -39,6 +43,9 @@ namespace ConsoleApplication1
             int result = SumFunc(a, b);
             Console.WriteLine("{0} + {1} = {2}", a, b, result);
 
+
+
+            print_prime_factors(80);
 
             Console.ReadLine();
         }
