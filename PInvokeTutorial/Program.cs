@@ -11,7 +11,7 @@ namespace ConsoleApplication1
     {
 
         [DllImport("NativeLibrary.dll")]
-        public static extern void Hello(string messag, int count, bool isNewLine);
+        public static extern void Hello(string message, int count, bool isNewLine);
 
 
         [DllImport("NativeLibrary.dll", EntryPoint = "add")]
